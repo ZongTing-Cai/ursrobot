@@ -22,7 +22,7 @@ async function getUserByName(name) {
 /**
  * 從Firestore資料庫中獲取用戶資料。
  * @param {string} userEmail 用戶的電子郵件地址，用作檢索用戶資料的唯一標識。
- * @return {Promise<User>} 當從Firestore資料庫中成功獲取用戶資料時，返回一個包含用戶資料的Promise對象。
+ * @return {Promise<User>} 當從Firestore資料庫中成功獲取用戶資料時，返回一個包含用戶資料的Promise物件。
  */
 async function getUserByEmail(userEmail) {
   const users = await db.collection("users")
@@ -45,7 +45,7 @@ async function getUserByEmail(userEmail) {
 /**
  * 從Firestore資料庫中獲取用戶資料。
  * @param {string} uuid 用戶的uuid，用作檢索用戶資料的唯一標識。
- * @return {Promise<User>} 當從Firestore資料庫中成功獲取用戶資料時，返回一個包含用戶資料的Promise對象。
+ * @return {Promise<User>} 當從Firestore資料庫中成功獲取用戶資料時，返回一個包含用戶資料的Promise物件。
  */
 async function getUserByUUID(uuid) {
   const userRef = db.collection("users").doc(uuid);
@@ -62,7 +62,7 @@ async function getUserByUUID(uuid) {
 /**
  * 將用戶資料保存到Firestore資料庫。
  * @param {CreateUser} userData 用戶資料。
- * @return {Promise<void>} 當用戶資料保存到Firestore資料庫時，返回一個Promise對象。
+ * @return {Promise<void>} 當用戶資料保存到Firestore資料庫時，返回一個Promise物件。
  */
 async function createUser(userData) {
   const userRef = db.collection("users").doc(userData.uuid);
@@ -82,7 +82,7 @@ async function createUser(userData) {
  * 將更新用戶資料保存到Firestore資料庫。
  * @param {string} uuid 用戶的uuid。
  * @param {User} userData 用戶資料。
- * @return {Promise<void>} 當用戶資料保存到Firestore資料庫時，返回一個Promise對象。
+ * @return {Promise<void>} 當用戶資料保存到Firestore資料庫時，返回一個Promise物件。
  */
 async function updateUser(uuid, userData) {
   const userRef = db.collection("users").doc(uuid);
@@ -95,7 +95,7 @@ async function updateUser(uuid, userData) {
 /**
  * 從Firestore資料庫中刪除用戶資料。
  * @param {string} uuid 用戶的uuid。
- * @return {Promise<void>} 當用戶資料從Firestore資料庫中成功刪除時，返回一個Promise對象。
+ * @return {Promise<void>} 當用戶資料從Firestore資料庫中成功刪除時，返回一個Promise物件。
  */
 async function deleteUser(uuid) {
   const userRef = db.collection("users").doc(uuid);

@@ -42,8 +42,8 @@ class CreateDevice {
   }
 
   /**
-   * 將設備實例轉換為JavaScript對象。
-   * @return {Object} 代表設備實例的JavaScript對象。
+   * 將設備實例轉換為JavaScript物件。
+   * @return {Object} 代表設備實例的JavaScript物件。
    */
   toJSObject() {
     return {
@@ -76,7 +76,7 @@ class Device {
 
   /**
    * 更新設備資料。
-   * @param {Object} updateObject 用於更新設備資料的對象。
+   * @param {Object} updateObject 用於更新設備資料的物件。
    */
   update(updateObject) {
     for (const key in this) {
@@ -105,8 +105,8 @@ class Device {
   }
 
   /**
-   * 將設備實例轉換為JavaScript對象。
-   * @return {Object} 代表設備實例的JavaScript對象。
+   * 將設備實例轉換為JavaScript物件。
+   * @return {Object} 代表設備實例的JavaScript物件。
    */
   toJSObject() {
     return {

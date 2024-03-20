@@ -53,8 +53,8 @@ class CreateUser {
   }
 
   /**
-   * 將用戶實例轉換為JavaScript對象。
-   * @return {Object} 代表用戶實例的JavaScript對象。
+   * 將用戶實例轉換為JavaScript物件。
+   * @return {Object} 代表用戶實例的JavaScript物件。
    */
   toJSObject() {
     return {
@@ -116,8 +116,8 @@ class User {
   }
 
   /**
-   * 將用戶實例轉換為JavaScript對象。
-   * @return {Object} 代表用戶實例的JavaScript對象。
+   * 將用戶實例轉換為JavaScript物件。
+   * @return {Object} 代表用戶實例的JavaScript物件。
    */
   toJSObject() {
     return {
@@ -127,7 +127,7 @@ class User {
 
   /**
    * 更新用戶資料。
-   * @param {Object} updateObject 用於更新用戶資料的對象。
+   * @param {Object} updateObject 用於更新用戶資料的物件。
    */
   update(updateObject) {
     for (const key in this) {

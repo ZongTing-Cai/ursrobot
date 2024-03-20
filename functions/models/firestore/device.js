@@ -25,7 +25,7 @@ async function getDevicesByModel(model) {
 /**
  * 從Firestore資料庫中獲取設備資料。
  * @param {string} uuid 設備的uuid，用作檢索設備資料的唯一標識。
- * @return {Promise<Device>} 當從Firestore資料庫中成功獲取設備資料時，返回一個包含設備資料的Promise對象。
+ * @return {Promise<Device>} 當從Firestore資料庫中成功獲取設備資料時，返回一個包含設備資料的Promise物件。
  */
 async function getDeviceByUUID(uuid) {
   const deviceRef = db.collection("devices").doc(uuid);
@@ -42,7 +42,7 @@ async function getDeviceByUUID(uuid) {
 /**
  * 將設備資料保存到Firestore資料庫。
  * @param {CreateDevice} deviceData 設備資料。
- * @return {Promise<void>} 當設備資料保存到Firestore資料庫時，返回一個Promise對象。
+ * @return {Promise<void>} 當設備資料保存到Firestore資料庫時，返回一個Promise物件。
  */
 async function createDevice(deviceData) {
   const deviceRef = db.collection("devices").doc(deviceData.uuid);
@@ -56,7 +56,7 @@ async function createDevice(deviceData) {
  * 將更新設備資料保存到Firestore資料庫。
  * @param {string} uuid 設備的uuid。
  * @param {Device} deviceData 設備資料。
- * @return {Promise<void>} 當設備資料保存到Firestore資料庫時，返回一個Promise對象。
+ * @return {Promise<void>} 當設備資料保存到Firestore資料庫時，返回一個Promise物件。
  */
 async function updateDevice(uuid, deviceData) {
   const deviceRef = db.collection("devices").doc(uuid);
@@ -69,7 +69,7 @@ async function updateDevice(uuid, deviceData) {
 /**
  * 從Firestore資料庫中刪除設備資料。
  * @param {string} uuid 設備的uuid。
- * @return {Promise<void>} 當設備資料從Firestore資料庫中成功刪除時，返回一個Promise對象。
+ * @return {Promise<void>} 當設備資料從Firestore資料庫中成功刪除時，返回一個Promise物件。
  */
 async function deleteDevice(uuid) {
   const deviceRef = db.collection("devices").doc(uuid);
